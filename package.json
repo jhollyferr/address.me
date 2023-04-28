@@ -1,0 +1,21 @@
+{
+  "name": "address.me",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "packages": [
+    "packages/*"
+  ],
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "jhollyferr <jhollyfer.fr@gmail.com>",
+  "dependencies": {
+    "lerna": "^6.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "18.16.2",
+    "typescript": "5.0.4"
+  }
+}
