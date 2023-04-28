@@ -15,9 +15,7 @@ jobs:
           node-version: 18
           cache: "yarn"
 
-      - name: Navigate to api directory
-        run: cd packages/api
-
+      - name: Install packages
       - run: yarn install
 
       - name: Run unit tests
