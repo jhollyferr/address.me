@@ -1,18 +1,23 @@
 {
-  "name": "address.me",
+  "author": "jhollyferr <jhollyfer.fr@gmail.com>",
+  "name": "address-me",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "private": true,
-  "packages": [
-    "packages/*"
-  ],
-  "workspaces": [
-    "packages/*"
-  ],
-  "author": "jhollyferr <jhollyfer.fr@gmail.com>",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "build": "lerna run --parallel build",
+    "start": "lerna run --parallel start",
+    "dev": "lerna run --parallel dev"
+  },
   "dependencies": {
-    "lerna": "^6.6.1"
+    "lerna": "6.6.1"
   },
   "devDependencies": {
     "@types/node": "18.16.2",
