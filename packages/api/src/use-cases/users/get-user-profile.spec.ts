@@ -1,7 +1,7 @@
 import { hash } from 'bcryptjs';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-import { InMemoryUsersRepository } from '~api/repositories/in-memory/in-memory-users-repository';
+import { InMemoryUsersRepository } from '~/repositories/in-memory/in-memory-users-repository';
 
 import { ResourceNotFoundError } from '../errors/resource-not-found-error';
 

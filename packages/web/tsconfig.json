@@ -1,8 +1,11 @@
 {
-	"extends": "../../tsconfig.json",
 	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["./src/*"]
+		},
 		"outDir": "./dist",
-    "rootDirs": ["./src"],
+		"rootDirs": ["./src"],
 		"rootDir": "./",
 		"target": "ESNext",
 		"useDefineForClassFields": true,

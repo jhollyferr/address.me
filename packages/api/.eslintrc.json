@@ -44,7 +44,7 @@
 	"settings": {
 		"import/resolver": {
 			"alias": {
-				"map": [["~api", "./packages/api/src"]],
+				"map": [["~", "./packages/api/src"]],
 				"extensions": [".ts", ".js", ".json"]
 			}
 		}

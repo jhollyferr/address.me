@@ -1,7 +1,7 @@
 import { cleanup, render } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 
-import { Avatar } from '~/components/Avatar';
+import { Avatar } from '.';
 
 describe('Avatar Component', () => {
 	afterEach(cleanup);

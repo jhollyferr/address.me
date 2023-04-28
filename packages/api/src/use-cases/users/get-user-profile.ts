@@ -2,7 +2,7 @@
 
 import type { User } from '@prisma/client';
 
-import type { UsersRepository } from '~api/repositories/users-repository';
+import type { UsersRepository } from '~/repositories/users-repository';
 
 import { ResourceNotFoundError } from '../errors/resource-not-found-error';
 

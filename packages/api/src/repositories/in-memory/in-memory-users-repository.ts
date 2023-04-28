@@ -6,18 +6,14 @@ import type { UsersRepository } from '../users-repository';
 export class InMemoryUsersRepository implements UsersRepository {
 	public items: User[] = [];
 
-	async create(
-		data: Prisma.UserCreateInput & {
-			isAdmin?: boolean;
-		},
-	): Promise<User> {
+	async create(data: Prisma.UserCreateInput): Promise<User> {
 		const user: User = {
 			id: randomUUID(),
 			name: data.name,
 			email: data.email,
 			password_hash: data.password_hash,
-			role: data.isAdmin ? 'ADMIN' : 'MEMBER',
 			created_at: new Date(),
+			updated_at: new Date(),
 		};
 
 		this.items.push(user);

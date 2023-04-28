@@ -1,8 +1,8 @@
 import request from 'supertest';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
-import { app } from '~api/app';
-import { createAndAuthenticateUser } from '~api/utils/test/create-and-authenticate-user';
+import { app } from '~/app';
+import { createAndAuthenticateUser } from '~/utils/test/create-and-authenticate-user';
 
 describe('Profile (e2e)', () => {
 	beforeAll(async () => {

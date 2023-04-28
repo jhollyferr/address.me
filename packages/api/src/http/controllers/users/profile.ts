@@ -1,6 +1,6 @@
 import type { FastifyReply, FastifyRequest } from 'fastify';
 
-import { makeGetUseProfileUseCase } from '~api/use-cases/factories/make-get-user-profile-use-case';
+import { makeGetUseProfileUseCase } from '~/use-cases/factories/make-get-user-profile-use-case';
 
 export async function profile(
 	request: FastifyRequest,

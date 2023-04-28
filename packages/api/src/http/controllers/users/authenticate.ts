@@ -1,8 +1,8 @@
 import type { FastifyReply, FastifyRequest } from 'fastify';
 import { z } from 'zod';
 
-import { InvalidCredentialsError } from '~api/use-cases/errors/invalid-credentials-error';
-import { makeAuthenticateUseCase } from '~api/use-cases/factories/make-authenticate-use-case';
+import { InvalidCredentialsError } from '~/use-cases/errors/invalid-credentials-error';
+import { makeAuthenticateUseCase } from '~/use-cases/factories/make-authenticate-use-case';
 
 export async function authenticate(
 	request: FastifyRequest,
@@ -21,9 +21,7 @@ export async function authenticate(
 		const { user } = await authenticateUseCase.execute(data);
 
 		const token = await reply.jwtSign(
-			{
-				role: user.role,
-			},
+			{},
 			{
 				sign: {
 					sub: user.id,
@@ -32,9 +30,7 @@ export async function authenticate(
 		);
 
 		const refreshToken = await reply.jwtSign(
-			{
-				role: user.role,
-			},
+			{},
 			{
 				sign: {
 					sub: user.id,

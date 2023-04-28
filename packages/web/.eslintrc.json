@@ -56,7 +56,7 @@
 	"settings": {
 		"import/resolver": {
 			"alias": {
-				"map": [["~web", "./packages/web/src"]],
+				"map": [["~", "./packages/web/src"]],
 				"extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
 			}
 		}

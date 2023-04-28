@@ -2,7 +2,7 @@ import { hash } from 'bcryptjs';
 import type { FastifyInstance } from 'fastify';
 import request from 'supertest';
 
-import { prisma } from '~api/lib/prisma';
+import { prisma } from '~/lib/prisma';
 
 interface AuthResponse {
 	token: string;
@@ -10,14 +10,12 @@ interface AuthResponse {
 
 export async function createAndAuthenticateUser(
 	app: FastifyInstance,
-	isAdmin = false,
 ): Promise<AuthResponse> {
 	await prisma.user.create({
 		data: {
 			name: 'John Doe',
 			email: 'johndoe@example.com',
 			password_hash: await hash('123456', 6),
-			role: isAdmin ? 'ADMIN' : 'MEMBER',
 		},
 	});
 

@@ -1,6 +1,6 @@
 import type { Prisma, User } from '@prisma/client';
 
-import { prisma } from '~api/lib/prisma';
+import { prisma } from '~/lib/prisma';
 
 import type { UsersRepository } from '../users-repository';
 

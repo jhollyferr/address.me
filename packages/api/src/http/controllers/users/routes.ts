@@ -1,6 +1,6 @@
 import type { FastifyInstance } from 'fastify';
 
-import { verifyJWT } from '~api/http/middlewares/verify-jwt';
+import { verifyJWT } from '~/http/middlewares/verify-jwt';
 
 import { authenticate } from './authenticate';
 import { profile } from './profile';

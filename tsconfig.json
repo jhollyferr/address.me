@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "~api/*": ["packages/api/src/*"],
-      "~web/*": ["packages/web/src/*"]
-    }
+    "baseUrl": "./"
   },
   "include": ["packages"]
 }
