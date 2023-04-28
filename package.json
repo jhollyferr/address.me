@@ -14,7 +14,8 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "build": "lerna run --parallel build",
     "start": "lerna run --parallel start",
-    "dev": "lerna run --parallel dev"
+    "dev": "lerna run --parallel dev",
+    "test": "lerna run --parallel test"
   },
   "dependencies": {
     "lerna": "6.6.1"

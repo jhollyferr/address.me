@@ -15,8 +15,6 @@ jobs:
           node-version: 18
           cache: "yarn"
 
-      - run: yarn install
-
       - name: Navigate to api directory
         run: cd packages/api
 
