@@ -6,7 +6,7 @@ import { ZodError } from 'zod';
 import { Env } from './env';
 import { usersRoutes } from './http/controllers/users/routes';
 
-export const app = fastify();
+export const app = fastify({ logger: true });
 
 app.register(fastifyJwt, {
 	secret: Env.JWT_SECRET,
