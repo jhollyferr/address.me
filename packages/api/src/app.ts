@@ -1,4 +1,5 @@
 import fastifyCookie from '@fastify/cookie';
+import fastifyCors from '@fastify/cors';
 import fastifyJwt from '@fastify/jwt';
 import fastify from 'fastify';
 import { ZodError } from 'zod';
@@ -18,6 +19,11 @@ app.register(fastifyJwt, {
 	sign: {
 		expiresIn: '10m',
 	},
+});
+
+app.register(fastifyCors, {
+	origin: '*',
+	methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
 });
 
 app.register(fastifyCookie);

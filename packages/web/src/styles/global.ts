@@ -13,17 +13,20 @@ export const GlobalStyle = createGlobalStyle`
     
     :focus{
         outline: 0;
-        box-shadow: 0 0 0 1px ${({ theme }) => theme['green']};
+        box-shadow: 0 0 0 1px ${({ theme }) => theme['indigo-300']};
     }
     
     body{
-        background-color: ${({ theme }) => theme['white']};
-        color: ${({ theme }) => theme['green']};
+        background-color: ${({ theme }) => theme['gray-200']};
+        color: ${({ theme }) => theme['indigo-600']};
         --webkit-font-smoothing: antialiased;
 
         /*  */
         height: 100vh;
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         /*  */
     }
     
