@@ -5,7 +5,7 @@ export const userAddressBodySchema = z.object({
 		message: `The value provided for 'cep' must have exactly 9 characters.`,
 	}),
 	street: z.string(),
-	complement: z.string().optional(),
+	complement: z.string().nullable(),
 	neighborhood: z.string(),
 	location: z.string(),
 	uf: z.string().length(2, {
