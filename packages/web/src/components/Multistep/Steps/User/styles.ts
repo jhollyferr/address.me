@@ -13,6 +13,7 @@ export const InputFormControl = styled.div<{ error: boolean }>`
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+	position: relative;
 
 	input {
 		border: 1px solid transparent;
@@ -21,6 +22,14 @@ export const InputFormControl = styled.div<{ error: boolean }>`
 		width: 100%;
 		height: 2.5rem;
 		padding-left: 1rem;
+
+		&::placeholder {
+			color: ${({ theme }) => theme['gray-400']};
+		}
+	}
+
+	span {
+		font-size: 0.8rem;
 	}
 
 	${({ error }) =>
@@ -30,9 +39,20 @@ export const InputFormControl = styled.div<{ error: boolean }>`
 				box-shadow: 0 0 0 1px ${({ theme }) => theme['red-400']};
 			}
 
-			label,
 			span {
 				color: ${({ theme }) => theme['red-400']};
 			}
 		`}
+`;
+
+export const ViewInputBox = styled.div`
+	position: relative;
+	flex: 1;
+
+	svg {
+		position: absolute;
+		right: 1rem;
+		top: 0.5rem;
+		cursor: pointer;
+	}
 `;

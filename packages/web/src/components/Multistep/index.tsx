@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { zodResolver } from '@hookform/resolvers/zod';
+import { AxiosError } from 'axios';
 import type { ReactElement } from 'react';
 import { useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import { Steps } from 'rsuite';
 
 import { StepsForms } from './Steps';
@@ -10,6 +12,7 @@ import { Form, MultiStepContainer } from './styles';
 
 import type { UserRegisterFormType } from '~/schemas/form';
 import { UserRegisterFormSchema } from '~/schemas/form';
+import { UserService } from '~/services';
 
 export function Multistep(): ReactElement {
 	const [step, setStep] = useState<number>(0);
@@ -27,10 +30,21 @@ export function Multistep(): ReactElement {
 		resolver: zodResolver(UserRegisterFormSchema),
 	});
 
-	async function handleRegister(data: UserRegisterFormType): Promise<void> {
+	const { reset } = FormStep;
+
+	async function handleRegister(data: UserRegisterFormType): Promise<unknown> {
 		try {
-			console.log(data);
+			await UserService.register(data);
+			handleNext();
+			reset();
 		} catch (error) {
+			if (error instanceof AxiosError) {
+				if (error.response?.status === 409)
+					return toast.error('E-mail já cadastrado.');
+
+				toast.error('Houve um erro interno, tente novamente mais tarde!');
+			}
+
 			console.log(error);
 		}
 	}
@@ -49,6 +63,7 @@ export function Multistep(): ReactElement {
 						handleBack={handleBack}
 						handleNext={handleNext}
 						step={step}
+						setStep={setStep}
 					/>
 				</Form>
 			</FormProvider>
