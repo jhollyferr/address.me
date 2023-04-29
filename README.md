@@ -17,7 +17,7 @@ Cadastro de usuário e seu endereço.
 
 - [x] A senha do usuário precisa estar criptografada
 - [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL
-- [x] O bando deve estar em um container docker
+- [x] O banco deve estar em um container docker
 - [x] A busca de endereço deve ser feita por uma API exerna (viacep ou outro)
 
 ## Como instalar ?
@@ -41,5 +41,5 @@ Caso não consiga iniciar os pacotes navegue até os diretórios `/web` e `/api`
 
 ## Demo
 
-Aqui você pode testar o WEB APP no endereço https://address-me-web.vercel.app/
-e a API no endereço https://address-me-api.onrender.com
+1. WEB: https://address-me-web.vercel.app/
+2. API: https://address-me-api.onrender.com
