@@ -1,5 +1,6 @@
-import { CepAddressResponse } from '~/dtos/address';
-import { CepRepository } from '../cep-repository';
+import type { CepAddressResponse } from '~/dtos/address';
+
+import type { CepRepository } from '../cep-repository';
 
 export class InMemoryCepRepository implements CepRepository {
 	public items: CepAddressResponse[] = [

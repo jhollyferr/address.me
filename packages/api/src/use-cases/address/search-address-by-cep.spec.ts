@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it } from 'vitest';
 
 import { InvalidCepError } from '~/errors/address/invalid-cep-error';
 import { InMemoryCepRepository } from '~/repositories/in-memory/in-memory-cep-repository';
+
 import { SearchAddressByCepUseCase } from './search-address-by-cep';
 
 let cepRepository: InMemoryCepRepository;

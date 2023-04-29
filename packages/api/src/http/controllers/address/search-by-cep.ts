@@ -1,6 +1,6 @@
 import type { FastifyReply, FastifyRequest } from 'fastify';
-import { InvalidCepError } from '~/errors/address/invalid-cep-error';
 
+import { InvalidCepError } from '~/errors/address/invalid-cep-error';
 import { makeSearchByCepUseCase } from '~/factories/address/make-search-by-cep';
 import { searchByCepParamsSchema } from '~/schemas/address';
 
