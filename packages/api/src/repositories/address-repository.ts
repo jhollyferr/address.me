@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
-import type { Address, Prisma } from '@prisma/client';
+import type { Address } from '@prisma/client';
+
+import type { CreateUserAddress } from '~/dtos/address';
 
 export interface AddressRepository {
-	create(data: Prisma.AddressCreateInput): Promise<Address>;
+	create(data: CreateUserAddress): Promise<Address>;
 }

@@ -13,11 +13,21 @@ describe('Register (e2e)', () => {
 	});
 
 	it('should be able to register', async () => {
-		const response = await request(app.server).post('/users').send({
-			name: 'John Doe',
-			email: 'johndoe@example.com',
-			password: '123456',
-		});
+		const response = await request(app.server)
+			.post('/users')
+			.send({
+				name: 'Jhollyfer',
+				email: 'jhollyfer.fr@gmail.com',
+				password: '123456',
+				address: {
+					complement: 'de 2637 a 3261 - lado ímpar',
+					location: 'Itacoatiara',
+					neighborhood: 'Santa Luzia',
+					street: 'Rua Nossa Senhora do Rosário',
+					uf: 'AM',
+					zip: '69104-015',
+				},
+			});
 
 		expect(response.statusCode).toEqual(201);
 	});

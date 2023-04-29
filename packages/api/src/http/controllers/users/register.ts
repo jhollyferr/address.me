@@ -1,19 +1,13 @@
 import type { FastifyReply, FastifyRequest } from 'fastify';
-import { z } from 'zod';
 
-import { UserAlreadyExistsError } from '~/use-cases/errors/user-already-exists-error';
-import { makeRegisterUseCase } from '~/use-cases/factories/make-register-use-case';
+import { UserAlreadyExistsError } from '~/errors/users/user-already-exists-error';
+import { makeRegisterUseCase } from '~/factories/users/make-register-use-case';
+import { registerBodySchema } from '~/schemas/register';
 
 export async function register(
 	request: FastifyRequest,
 	reply: FastifyReply,
 ): Promise<FastifyReply> {
-	const registerBodySchema = z.object({
-		name: z.string(),
-		email: z.string().email(),
-		password: z.string().min(6),
-	});
-
 	const data = registerBodySchema.parse(request.body);
 
 	try {

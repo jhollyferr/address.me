@@ -7,10 +7,12 @@ const envSchema = z.object({
 	JWT_SECRET: z.string(),
 	PORT: z.coerce.number().default(3333),
 
-	POSTGRESQL_USERNAME: z.string(),
-	POSTGRESQL_PASSWORD: z.string(),
-	POSTGRESQL_DATABASE: z.string(),
+	POSTGRESQL_USERNAME: z.string().optional(),
+	POSTGRESQL_PASSWORD: z.string().optional(),
+	POSTGRESQL_DATABASE: z.string().optional(),
 	POSTGRESQL_PORT: z.coerce.number().default(5432),
+
+	CEP_API_URL: z.string().url(),
 });
 
 const _env = envSchema.safeParse(process.env);
