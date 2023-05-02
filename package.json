@@ -1,29 +1,29 @@
 {
-  "author": "jhollyferr <jhollyfer.fr@gmail.com>",
-  "name": "address-me",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
-  "scripts": {
-    "bootstrap": "lerna bootstrap --use-workspaces",
-    "build": "lerna run --parallel build",
-    "start": "lerna run --parallel start",
-    "dev": "lerna run --parallel dev",
-    "test": "lerna run --parallel test",
-    "test:e2e": "lerna run --parallel test:e2e"
-
-  },
-  "dependencies": {
-    "lerna": "6.6.1"
-  },
-  "devDependencies": {
-    "@types/node": "18.16.2",
-    "typescript": "5.0.4"
-  }
+	"name": "address.me",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"private": true,
+	"workspaces": {
+		"packages": [
+			"packages/*"
+		]
+	},
+	"author": "jhollyferr <jhollyfer.fr@gmail.com>",
+	"scripts": {
+		"bootstrap": "lerna bootstrap --use-workspaces",
+		"build": "lerna run --parallel build",
+		"start": "lerna run --parallel start",
+		"dev": "lerna run --parallel dev",
+		"test": "lerna run --parallel test",
+		"test:e2e": "lerna run --parallel test:e2e"
+	},
+	"dependencies": {
+		"lerna": "6.6.1"
+	},
+	"devDependencies": {
+		"@address.me/eslint": "*",
+		"@types/node": "18.16.2",
+		"typescript": "5.0.4"
+	}
 }

@@ -1,5 +1,5 @@
 {
-	"name": "address.me.web",
+	"name": "@address.me/web",
 	"private": true,
 	"version": "0.0.0",
 	"engines": {
@@ -27,29 +27,16 @@
 		"zod": "3.21.4"
 	},
 	"devDependencies": {
+		"@address.me/eslint": "*",
 		"@testing-library/jest-dom": "5.16.5",
 		"@testing-library/react": "14.0.0",
-		"@types/node": "18.13.0",
 		"@types/react": "18.0.27",
 		"@types/react-dom": "18.0.10",
 		"@types/react-text-mask": "5.4.11",
 		"@types/styled-components": "5.1.26",
-		"@typescript-eslint/eslint-plugin": "5.51.0",
-		"@typescript-eslint/parser": "5.51.0",
 		"@vitejs/plugin-react": "3.1.0",
-		"eslint": "8.0.1",
-		"eslint-config-prettier": "8.6.0",
-		"eslint-import-resolver-alias": "1.1.2",
-		"eslint-plugin-import": "2.25.2",
-		"eslint-plugin-n": "15.0.0",
-		"eslint-plugin-prettier": "4.2.1",
-		"eslint-plugin-promise": "6.0.0",
-		"eslint-plugin-react": "7.32.2",
-		"eslint-plugin-react-hooks": "4.6.0",
 		"jest-styled-components": "7.1.1",
 		"jsdom": "21.1.0",
-		"prettier": "2.8.4",
-		"typescript": "*",
 		"vite": "4.1.0",
 		"vitest": "0.28.5"
 	}
